@@ -1,7 +1,10 @@
 import './App.css';
 import Greet from './components/Greet';
+import Heading from './components/Heading';
+import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import Stataus from './components/Stataus';
 
 function App() {
 
@@ -27,9 +30,15 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name='Vishwas' countNumber={20} isLoggedIn={false} />
+      <Greet name='Vishwas' messageCount={20} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
+      <Stataus  status='loading'/>
+      <Heading>Placeholder Text</Heading>
+      <Oscar>
+        <Heading>Oscar goes to Leonardo diCaprio!</Heading>
+      </Oscar>
+      <Greet name='Vishwas' isLoggedIn={true} />
     </div>
   );
 }
